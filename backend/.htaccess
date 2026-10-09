@@ -1,0 +1,6 @@
+Options -MultiViews
+RewriteEngine On
+
+# Redireciona tudo para index.php (exceto arquivos existentes)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
